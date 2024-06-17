@@ -50,22 +50,22 @@ ARCHIVOS DATAFUNCTIONS Y DATAFUNCTIONSNOPRES
 
 - **create_train_test_arrays_reduced(x_train_user1_260617_hips, x_train_user2_180717_hand, x_test_user1_260617_hips, x_test_user2_180717_hand, y_train_user1_260617, y_train_user2_180717,
 y_test_user1_260617, y_test_user2_180717)**
-  - *Argumentos:* arrays de datos de entrenamiento y test deseados para concatenar y los arrays de etiquetas correspondientes a cada uno de ellos.
-  - Este método hace exactamente lo mismo que el expllicado previamente con la diferencia de que los arrays resultantes son menos extensos.
-  - *Return:* diccionario con los datos de entrenamiento y pruebas y sus correspondientes arrays de etiquetas.
+  * *Argumentos:* arrays de datos de entrenamiento y test deseados para concatenar y los arrays de etiquetas correspondientes a cada uno de ellos.
+  * Este método hace exactamente lo mismo que el expllicado previamente con la diferencia de que los arrays resultantes son menos extensos.
+  * *Return:* diccionario con los datos de entrenamiento y pruebas y sus correspondientes arrays de etiquetas.
 -  **create_first_layers_model(input_shape, para_print)**
-  -  *Argumentos:* forma que deseamos que tenga la capa de entrada del modelo y valor booleano que indica si queremos imprimir por pantalla o no las formas de cada entrada y salida de cada capa.
-  -  Este método construye las tres primeras capas del modelo MHATCN: input, TCN y MHA.
-  -  *Return:* la salida de la tercera capa MHA y la entrada de la primera capa de input.
+  *  *Argumentos:* forma que deseamos que tenga la capa de entrada del modelo y valor booleano que indica si queremos imprimir por pantalla o no las formas de cada entrada y salida de cada capa.
+  *  Este método construye las tres primeras capas del modelo MHATCN: input, TCN y MHA.
+  *  *Return:* la salida de la tercera capa MHA y la entrada de la primera capa de input.
 -  **create_10_first_models(input_shape)**
-  - *Argumentos:* forma que queremos que tenga la entrada de nuestro modelo.
-  - Este método crea las primeras capas de nuestro modelo para cada uno de los datos de entrada. Al principio eran 10 las entradas, pero con la omisión del sensor de presión se quedaron en 9.
+  * *Argumentos:* forma que queremos que tenga la entrada de nuestro modelo.
+  * Este método crea las primeras capas de nuestro modelo para cada uno de los datos de entrada. Al principio eran 10 las entradas, pero con la omisión del sensor de presión se quedaron en 9.
     Después de crear las primeras capas, se agrupan en un mismo array las entradas de cada uno de los datos de entrada y se crea una concatenación de todas las salidas en una sola.
-  - *Return:* se devuelve la salida concatenada y el array de inputs.
+  * *Return:* se devuelve la salida concatenada y el array de inputs.
 - **create_model(input_shape)**
-  - *Argumentos:** la forma que queremos que tenga la entrada de nuestro modelo.
-  - Esta función primero crea las primeras capas para cada uno de los datos, obteniendo de ellas la salida fusionada de todos ellos y las entradas de cada uno. Después se construyen las
+  * *Argumentos:** la forma que queremos que tenga la entrada de nuestro modelo.
+  * Esta función primero crea las primeras capas para cada uno de los datos, obteniendo de ellas la salida fusionada de todos ellos y las entradas de cada uno. Después se construyen las
     últimas capas: CNN y Dense (output). Una vez construidas, se crea el modelo final con las entradas de cada tipo de dato y la salida de la última capa Dense (donde se realiza la clasificación).
     En esta función también se compila el modelo.
-  - *Return:* el modelo final.
+  * *Return:* el modelo final.
  
