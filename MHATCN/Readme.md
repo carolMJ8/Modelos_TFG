@@ -54,7 +54,7 @@ y_test_user1_260617, y_test_user2_180717)**
   * Este método hace exactamente lo mismo que el expllicado previamente con la diferencia de que los arrays resultantes son menos extensos.
   * *Return:* diccionario con los datos de entrenamiento y pruebas y sus correspondientes arrays de etiquetas.
 
-*  **create_first_layers_model(input_shape, para_print)**
+* **create_first_layers_model(input_shape, para_print)**
   *  *Argumentos:* forma que deseamos que tenga la capa de entrada del modelo y valor booleano que indica si queremos imprimir por pantalla o no las formas de cada entrada y salida de cada capa.
   *  Este método construye las tres primeras capas del modelo MHATCN: input, TCN y MHA.
   *  *Return:* la salida de la tercera capa MHA y la entrada de la primera capa de input.
