@@ -42,7 +42,7 @@ ARCHIVOS DATAFUNCTIONS Y DATAFUNCTIONSNOPRES
 
 - **create_full_train_test_arrays(nuevo=False, x_train_user1_220617_hips=None, x_test_user1_220617_hips=None, ... , y_train_user1_220617=None, y_test_user1_220617=None, ... )**
   - *Argumentos:* valor booleano indicando si juntar los arrays concatenados la mayoría de los archivos o solo de unos pocos, datos de entrenamiento y de prueba para cada uno de los días y
-    posiciones.
+    posiciones
     de grabación.
   - Este método concatena los arrays de datos de entrenamiento y de prueba de la mayoría de los archivos del dataset reducido con el fin de poder entrenar al modelo con todos estos datos. Si el
     valor de la variable nuevo es verdadero, se concatenan menos archivos de los que inicialmente se deseaban (llamando al método create_train_test_arrays_reduced).
